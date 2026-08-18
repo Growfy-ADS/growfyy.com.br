@@ -4,6 +4,7 @@ node_modules/
 # Production builds
 dist/
 build/
+.vercel/
 
 # TypeScript build cache and generated config outputs
 *.tsbuildinfo
