@@ -32,6 +32,28 @@ function App() {
     localStorage.setItem('growfy-theme', light ? 'light' : 'dark')
   }, [light])
 
+  useEffect(() => {
+    const isMobile = () => window.matchMedia('(max-width: 900px)').matches
+    const preventGestureZoom = (event: Event) => {
+      if (isMobile()) event.preventDefault()
+    }
+    const preventPinchZoom = (event: TouchEvent) => {
+      if (isMobile() && event.touches.length > 1) event.preventDefault()
+    }
+
+    document.addEventListener('gesturestart', preventGestureZoom, { passive: false })
+    document.addEventListener('gesturechange', preventGestureZoom, { passive: false })
+    document.addEventListener('gestureend', preventGestureZoom, { passive: false })
+    document.addEventListener('touchmove', preventPinchZoom, { passive: false })
+
+    return () => {
+      document.removeEventListener('gesturestart', preventGestureZoom)
+      document.removeEventListener('gesturechange', preventGestureZoom)
+      document.removeEventListener('gestureend', preventGestureZoom)
+      document.removeEventListener('touchmove', preventPinchZoom)
+    }
+  }, [])
+
   return <main>
     <motion.div className="scroll-progress" style={{ scaleX: scrollYProgress }} />
     <motion.div className="ambient" style={{ y: glowY }} />
