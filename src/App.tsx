@@ -116,7 +116,7 @@ function App() {
 
     <section className="cta-section"><div className="cta-orb"><Logo compact/></div><span>PRONTO PARA CRESCER?</span><h2>Vamos transformar sua<br/>presença em <em>resultado.</em></h2><a className="button light" href={whatsapp}>Falar com um especialista <ArrowRight size={18}/></a></section>
 
-    <footer><Logo/><div><a href="#serviços">Serviços</a><a href="#processo">Processo</a><a href="#sobre">Sobre</a></div><div className="social"><a href="#" aria-label="Instagram">IG</a></div><small>© 2026 Growfy. Todos os direitos reservados.</small></footer>
+    <footer><Logo/><div><a href="#serviços">Serviços</a><a href="#processo">Processo</a><a href="#sobre">Sobre</a></div><div className="social"><a className="footer-email" href="mailto:contato@growfyy.com.br">contato@growfyy.com.br</a><a href="#" aria-label="Instagram">IG</a></div><small>© 2026 Growfy. Todos os direitos reservados.</small></footer>
   </main>
 }
 

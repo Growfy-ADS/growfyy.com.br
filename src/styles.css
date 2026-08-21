@@ -47,3 +47,4 @@ body,main,header,.ticker,.service-grid article,.showcase-card,.float-card,.cta-s
 .scene-loader .logo img{width:90px;height:90px;animation:pulse 1.4s ease-in-out infinite}
 .cta-orb .logo img{width:590px;height:590px}
 .service-grid article:after{background:linear-gradient(135deg,#adec00,#54c92a,#009d4e)}
+.social .footer-email{width:auto;height:38px;border:0;border-radius:0;white-space:nowrap;transition:color .25s}.social .footer-email:hover{color:var(--lime)}
