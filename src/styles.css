@@ -48,3 +48,21 @@ body,main,header,.ticker,.service-grid article,.showcase-card,.float-card,.cta-s
 .cta-orb .logo img{width:590px;height:590px}
 .service-grid article:after{background:linear-gradient(135deg,#adec00,#54c92a,#009d4e)}
 .social .footer-email{width:auto;height:38px;border:0;border-radius:0;white-space:nowrap;transition:color .25s}.social .footer-email:hover{color:var(--lime)}
+
+/* Mobile navigation contrast and responsive footer */
+.instagram-link{transition:color .25s,border-color .25s,transform .25s}.instagram-link:hover{color:var(--lime);border-color:var(--lime);transform:translateY(-2px)}
+@media(max-width:900px){
+  .header-actions{position:relative;z-index:31}
+  nav.open{z-index:30;background:#070a08;color:#f3f4f6;border-bottom:1px solid rgba(255,255,255,.1)}
+  nav.open>a:not(.nav-cta){color:#f3f4f6}
+  nav.open .nav-cta{color:#071008;background:linear-gradient(110deg,#adec00,#54c92a,#009d4e);border-color:transparent}
+  .menu,.theme-toggle{color:#f3f4f6}
+  :root[data-theme="light"] nav.open{background:#f4f6ef;color:#142016;border-bottom-color:rgba(14,40,20,.14)}
+  :root[data-theme="light"] nav.open>a:not(.nav-cta){color:#142016}
+  :root[data-theme="light"] .menu,:root[data-theme="light"] .theme-toggle{color:#142016;background:rgba(255,255,255,.55)}
+  footer{grid-template-columns:1fr;justify-items:center;text-align:center;gap:22px}
+  footer>.logo{justify-self:center}
+  footer .social{width:100%;justify-content:center;align-items:center;flex-wrap:wrap;gap:12px 20px}
+  footer small{width:100%;grid-column:1;text-align:center}
+}
+@media(max-width:420px){footer .social{flex-direction:column}.social .footer-email{height:auto;min-height:38px;padding:8px 0}.instagram-link{flex:0 0 38px}}

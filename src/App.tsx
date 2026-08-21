@@ -13,6 +13,14 @@ function Logo({ compact = false }: { compact?: boolean }) {
   </a>
 }
 
+function InstagramIcon() {
+  return <svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="3" y="3" width="18" height="18" rx="5" />
+    <circle cx="12" cy="12" r="4" />
+    <circle cx="17.4" cy="6.6" r="1" fill="currentColor" stroke="none" />
+  </svg>
+}
+
 const services = [
   { icon: Code2, number: '01', title: 'Sites & Portfólios', text: 'Sites profissionais que transformam sua experiência em autoridade e novos contatos.' },
   { icon: BarChart3, number: '02', title: 'Tráfego pago', text: 'Campanhas estratégicas para encontrar as pessoas certas e acelerar seus resultados.' },
@@ -116,7 +124,7 @@ function App() {
 
     <section className="cta-section"><div className="cta-orb"><Logo compact/></div><span>PRONTO PARA CRESCER?</span><h2>Vamos transformar sua<br/>presença em <em>resultado.</em></h2><a className="button light" href={whatsapp}>Falar com um especialista <ArrowRight size={18}/></a></section>
 
-    <footer><Logo/><div><a href="#serviços">Serviços</a><a href="#processo">Processo</a><a href="#sobre">Sobre</a></div><div className="social"><a className="footer-email" href="mailto:contato@growfyy.com.br">contato@growfyy.com.br</a><a href="#" aria-label="Instagram">IG</a></div><small>© 2026 Growfy. Todos os direitos reservados.</small></footer>
+    <footer><Logo/><div><a href="#serviços">Serviços</a><a href="#processo">Processo</a><a href="#sobre">Sobre</a></div><div className="social"><a className="footer-email" href="mailto:contato@growfyy.com.br">contato@growfyy.com.br</a><a className="instagram-link" href="https://www.instagram.com/growfy.agencia/" target="_blank" rel="noreferrer" aria-label="Instagram da Growfy"><InstagramIcon/></a></div><small>© 2026 Growfy. Todos os direitos reservados.</small></footer>
   </main>
 }
 
